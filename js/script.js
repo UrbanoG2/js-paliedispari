@@ -5,6 +5,47 @@
 
 
 
+//chiedo all'utente di inserire una parola
+
+const userWord = prompt ("Inserisci una parola");
+console.log(userWord);
+
+//se la parola, al contrario, è uguale a userWord, allora è palindroma.
+//devo prendere lettera per lettera
+
+
+//creo un array vuoto
+let wordArr = [];
+let reverseArr = [];
+
+//divido la parola in lettere
+let splitWord = userWord.split("");
+// console.log(splitWord +  " parola lettera per lettera");
+
+
+//inserisco le lettere singole nell'array vuoto
+wordArr.push(splitWord);
+console.log(wordArr);
+
+
+//leggo le lettere al contrario
+
+
+let reverseWord = splitWord.reverse();
+// console.log(reverseWord + " parola al contrario lettera per lettera");
+
+reverseArr.push(reverseWord);
+console.log(reverseArr);
+
+//NON SO COSA STO FACENDO
+
+
+
+
+
+
+
+
 
 
 
@@ -33,53 +74,59 @@
 
 //l'utente inserisce un numero da 1 a 5
 
-const choice = prompt ("Pari o dispari?");
-console.log(choice + " (scelta dell'utente)");
 
-const userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
-console.log(userNum + " Numero Utente");
+
+
+
+//const choice = prompt ("Pari o dispari?");
+//console.log(choice + " (scelta dell'utente)");
+
+//const userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
+//console.log(userNum + " Numero Utente");
  
-let included = false;
+//let included = false;
 
-if (userNum >= 1 && userNum <= 5) {
+//if (userNum >= 1 && userNum <= 5) {
 
-    included = true;
-} 
+//    included = true;
+//} 
 
-let compNumber = Math.floor(Math.random() * 6);
-    console.log(compNumber + " Numero Computer");
+//let compNumber = Math.floor(Math.random() * 6);
+//    console.log(compNumber + " Numero Computer");
 
-let sum = userNum + compNumber;
-console.log(sum + " Somma Numeri");
+//let sum = userNum + compNumber;
+//console.log(sum + " Somma Numeri");
 
 
-if (included == true) {
-    console.log("Numero utente valido");
+//if (included == true) {
+//    console.log("Numero utente valido");
 
 
     
-    if (sum % 2 == 0) {
+//    if (sum % 2 == 0) {
 
-        console.log("Il numero è pari!");
+//        console.log("Il numero è pari!");
 
-    } else {
-        console.log("il numero è dispari!");
-    }
-
-
-} else {
-    console.log("Numero utente non valido");
-}
-
-if (choice == "pari" && sum % 2 == 0) {
-    alert ("User wins");
-} else if (choice == "dispari" && sum % 2 != 0) {
-    alert ("User wins");
-} else {
-    alert ("Computer wins");
-}
+//    } else {
+//        console.log("il numero è dispari!");
+//    }
 
 
+//} else {
+//    console.log("Numero utente non valido");
+//}
+
+//check pari dispari 
+
+//if (choice == "pari" && sum % 2 == 0) {
+//    alert ("User wins");
+//} else if (choice == "dispari" && sum % 2 != 0) {
+//    alert ("User wins");
+//} else if (choice != "pari" || choice != "dispari") {
+//    alert ("Valore non valido")
+//} else {
+//    alert ("Computer wins");
+//}    
 
 
-//if pari? 
+
