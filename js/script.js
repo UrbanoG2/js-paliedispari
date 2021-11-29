@@ -33,6 +33,9 @@
 
 //l'utente inserisce un numero da 1 a 5
 
+const choice = prompt ("Pari o dispari?");
+console.log(choice + " (scelta dell'utente)");
+
 const userNum = parseInt(prompt("Inserisci un numero da 1 a 5"));
 console.log(userNum + " Numero Utente");
  
@@ -43,15 +46,18 @@ if (userNum >= 1 && userNum <= 5) {
     included = true;
 } 
 
+let compNumber = Math.floor(Math.random() * 6);
+    console.log(compNumber + " Numero Computer");
+
+let sum = userNum + compNumber;
+console.log(sum + " Somma Numeri");
+
+
 if (included == true) {
     console.log("Numero utente valido");
 
-    let compNumber = Math.floor(Math.random() * 6);
-    console.log(compNumber + " Numero Computer");
 
-    let sum = userNum + compNumber;
-    console.log(sum + " Somma Numeri");
-
+    
     if (sum % 2 == 0) {
 
         console.log("Il numero è pari!");
@@ -63,6 +69,14 @@ if (included == true) {
 
 } else {
     console.log("Numero utente non valido");
+}
+
+if (choice == "pari" && sum % 2 == 0) {
+    alert ("User wins");
+} else if (choice == "dispari" && sum % 2 != 0) {
+    alert ("User wins");
+} else {
+    alert ("Computer wins");
 }
 
 
